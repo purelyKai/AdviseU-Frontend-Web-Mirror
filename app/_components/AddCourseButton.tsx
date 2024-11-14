@@ -30,7 +30,8 @@ const AddCourseButton = () => {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button variant="outline" size="icon">
+                <Button variant="outline" className="flex gap-2 items-center">
+                    <h3>Add Course</h3>
                     <PlusIcon />
                 </Button>
             </DialogTrigger>
