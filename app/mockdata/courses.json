@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "title": "Introduction to Programming",
+        "code": "CS101"
+    },
+    {
+        "id": 2,
+        "title": "Data Structures",
+        "code": "CS102",
+        "credits": 4
+    },
+    {
+        "id": 3,
+        "title": "Algorithms",
+        "code": "CS201",
+        "credits": 4
+    },
+    {
+        "id": 4,
+        "title": "Operating Systems",
+        "code": "CS301"
+    },
+    {
+        "id": 5,
+        "title": "Database Systems",
+        "code": "CS302"
+    },
+    {
+        "id": 6,
+        "title": "Computer Networks",
+        "code": "CS303"
+    },
+    {
+        "id": 7,
+        "title": "Software Engineering",
+        "code": "CS304"
+    },
+    {
+        "id": 8,
+        "title": "Artificial Intelligence",
+        "code": "CS401"
+    },
+    {
+        "id": 9,
+        "title": "Machine Learning",
+        "code": "CS402"
+    },
+    {
+        "id": 10,
+        "title": "Computer Graphics",
+        "code": "CS403"
+    }
+]

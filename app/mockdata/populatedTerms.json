@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "Winter 2025",
+        "courses": [
+            { "id": 1, "code": "CS 361", "title": "Software Engineering I" },
+            { "id": 2, "code": "CS 290", "title": "Web Development" },
+            { "id": 3, "code": "CS 325", "title": "Analysis of Algorithms" },
+            { "id": 4, "code": "CS 340", "title": "Intro To Databases" }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Spring 2025",
+        "courses": [
+            { "id": 5, "code": "CS 362", "title": "Software Engineering II" },
+            {
+                "id": 6,
+                "code": "CS 499",
+                "title": "Special Topics - Probabilistic and Causal Inference"
+            },
+            {
+                "id": 7,
+                "code": "CS 162",
+                "title": "Introduction to Computer Science II"
+            },
+            { "id": 8, "code": "CS 340", "title": "Intro To Databases" }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Summer 2025",
+        "courses": [
+            { "id": 9, "code": "CS 361", "title": "Software Engineering I" },
+            { "id": 10, "code": "CS 290", "title": "Web Development" },
+            { "id": 11, "code": "CS 325", "title": "Analysis of Algorithms" },
+            { "id": 12, "code": "CS 340", "title": "Intro To Databases" }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Fall 2025",
+        "courses": [
+            { "id": 13, "code": "CS 362", "title": "Software Engineering II" },
+            {
+                "id": 14,
+                "code": "CS 499",
+                "title": "Special Topics - Probabilistic and Causal Inference"
+            },
+            {
+                "id": 15,
+                "code": "CS 162",
+                "title": "Introduction to Computer Science II"
+            },
+            { "id": 16, "code": "CS 340", "title": "Intro To Databases" }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Winter 2026",
+        "courses": [
+            { "id": 17, "code": "CS 361", "title": "Software Engineering I" },
+            { "id": 18, "code": "CS 290", "title": "Web Development" },
+            { "id": 19, "code": "CS 325", "title": "Analysis of Algorithms" },
+            { "id": 20, "code": "CS 340", "title": "Intro To Databases" }
+        ]
+    }
+]
