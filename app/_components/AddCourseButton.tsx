@@ -1,30 +1,28 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import {
-    Dialog,
-    DialogTrigger,
-    DialogContent,
-    DialogTitle,
-    DialogDescription,
-    DialogClose,
-} from '@/components/ui/dialog';
+import { useTermsStore } from '../store';
+import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogClose } from '@/components/ui/dialog';
 import { PlusIcon } from 'lucide-react';
-import { Course } from '@/lib/types';
-import SearchContainer from './SearchCourseCard';
+import { Course, Term } from '@/lib/types';
+
+import SearchCourseCard from './SearchCourseCard';
 import { useState } from 'react';
+import mockCourses from '@/app/mockdata/courses.json';
 
-const availableCourses = Array(8).fill({
-    code: 'CS 290',
-    title: 'Web Development',
-});
+interface AddCourseButtonProps {
+    term: Term;
+}
 
-const AddCourseButton = () => {
+const AddCourseButton: React.FC<AddCourseButtonProps> = ({ term }) => {
     const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+    const { addCourseToTerm } = useTermsStore();
 
-    const handleAddCourse = () => {
-        // TODO: Add course to plan
-        console.log(selectedCourse);
+    const handleCourseSubmit = () => {
+        if (!selectedCourse) return;
+
+        addCourseToTerm(term, selectedCourse);
+        setSelectedCourse(null);
     };
 
     return (
@@ -37,9 +35,14 @@ const AddCourseButton = () => {
             </DialogTrigger>
             <DialogContent>
                 <DialogTitle>Add Course</DialogTitle>
-                <SearchContainer availableCourses={availableCourses} />
+                <SearchCourseCard
+                    availableCourses={mockCourses}
+                    setSelectedCourse={setSelectedCourse}
+                    selectedCourse={selectedCourse}
+                    term={term}
+                />
                 <DialogClose asChild>
-                    <Button variant="default" onClick={handleAddCourse}>
+                    <Button disabled={selectedCourse === null} variant="default" onClick={handleCourseSubmit}>
                         Add Course
                     </Button>
                 </DialogClose>

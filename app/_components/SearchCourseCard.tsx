@@ -3,14 +3,23 @@ import { Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Course } from '@/lib/types';
+import { Course, Term } from '@/lib/types';
+import CourseCard from '@/components/CourseCard';
 
-interface SearchContainerProps {
+interface SearchCourseCardProps {
+    term: Term;
     availableCourses: Course[];
+    setSelectedCourse: React.Dispatch<React.SetStateAction<Course | null>>;
+    selectedCourse: Course | null;
 }
 
-// TODO: Implement search functionality, pagination, and course selection
-const SearchContainer: React.FC<SearchContainerProps> = ({ availableCourses }) => {
+// TODO: Implement search functionality and pagination
+const SearchCourseCard: React.FC<SearchCourseCardProps> = ({
+    term,
+    availableCourses,
+    setSelectedCourse,
+    selectedCourse,
+}) => {
     return (
         <Card className="p-6">
             {/* Search Bar */}
@@ -21,14 +30,21 @@ const SearchContainer: React.FC<SearchContainerProps> = ({ availableCourses }) =
 
             {/* Course Search Results Grid */}
             <div className="grid gap-3 sm:grid-cols-2">
-                {availableCourses.map((course, index) => (
-                    <div key={index} className="flex items-center justify-between rounded-lg border p-3 shadow-sm">
-                        <div>
-                            <div className="font-medium">{course.code}</div>
-                            <div className="text-sm text-muted-foreground">{course.title}</div>
-                        </div>
-                    </div>
-                ))}
+                {availableCourses.map((course, index) => {
+                    // Ignore courses that are already in the term
+                    if (term.courses.find((c) => c.id === course.id)) return null;
+
+                    return (
+                        <CourseCard
+                            selected={selectedCourse === course}
+                            selectable
+                            course={course}
+                            onClick={() => setSelectedCourse(course)}
+                            key={index}
+                            term={term}
+                        />
+                    );
+                })}
             </div>
 
             {/* Pagination */}
@@ -46,4 +62,4 @@ const SearchContainer: React.FC<SearchContainerProps> = ({ availableCourses }) =
     );
 };
 
-export default SearchContainer;
+export default SearchCourseCard;
