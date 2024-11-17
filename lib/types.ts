@@ -5,7 +5,11 @@ export interface Term {
 }
 
 export interface Course {
-    id: number;
-    code: string;
-    title: string;
+    credits: number;
+    course_name: string;
+    course_number: string;
+    department: string;
+    description: string;
+    prerequisites: string[];
+    corequisites: string[];
 }

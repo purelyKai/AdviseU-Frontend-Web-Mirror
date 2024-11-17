@@ -1,54 +1,92 @@
 [
     {
-        "id": 1,
-        "title": "Introduction to Programming",
-        "code": "CS101"
+        "credits": 3,
+        "course_name": "Introduction to Programming",
+        "course_number": "CS101",
+        "department": "Computer Science",
+        "description": "An introduction to programming concepts and techniques.",
+        "prerequisites": [],
+        "corequisites": []
     },
     {
-        "id": 2,
-        "title": "Data Structures",
-        "code": "CS102",
-        "credits": 4
+        "credits": 4,
+        "course_name": "Data Structures",
+        "course_number": "CS102",
+        "department": "Computer Science",
+        "description": "Study of data structures and their applications.",
+        "prerequisites": ["CS101"],
+        "corequisites": []
     },
     {
-        "id": 3,
-        "title": "Algorithms",
-        "code": "CS201",
-        "credits": 4
+        "credits": 4,
+        "course_name": "Algorithms",
+        "course_number": "CS201",
+        "department": "Computer Science",
+        "description": "Introduction to algorithms and their analysis.",
+        "prerequisites": ["CS102"],
+        "corequisites": []
     },
     {
-        "id": 4,
-        "title": "Operating Systems",
-        "code": "CS301"
+        "credits": 3,
+        "course_name": "Operating Systems",
+        "course_number": "CS301",
+        "department": "Computer Science",
+        "description": "Study of operating system principles and design.",
+        "prerequisites": ["CS201"],
+        "corequisites": []
     },
     {
-        "id": 5,
-        "title": "Database Systems",
-        "code": "CS302"
+        "credits": 3,
+        "course_name": "Database Systems",
+        "course_number": "CS302",
+        "department": "Computer Science",
+        "description": "Introduction to database design and management.",
+        "prerequisites": ["CS201"],
+        "corequisites": []
     },
     {
-        "id": 6,
-        "title": "Computer Networks",
-        "code": "CS303"
+        "credits": 3,
+        "course_name": "Computer Networks",
+        "course_number": "CS303",
+        "department": "Computer Science",
+        "description": "Study of computer networking principles and protocols.",
+        "prerequisites": ["CS201"],
+        "corequisites": []
     },
     {
-        "id": 7,
-        "title": "Software Engineering",
-        "code": "CS304"
+        "credits": 3,
+        "course_name": "Software Engineering",
+        "course_number": "CS304",
+        "department": "Computer Science",
+        "description": "Introduction to software engineering principles and practices.",
+        "prerequisites": ["CS201"],
+        "corequisites": []
     },
     {
-        "id": 8,
-        "title": "Artificial Intelligence",
-        "code": "CS401"
+        "credits": 3,
+        "course_name": "Artificial Intelligence",
+        "course_number": "CS401",
+        "department": "Computer Science",
+        "description": "Introduction to artificial intelligence concepts and techniques.",
+        "prerequisites": ["CS304"],
+        "corequisites": []
     },
     {
-        "id": 9,
-        "title": "Machine Learning",
-        "code": "CS402"
+        "credits": 3,
+        "course_name": "Machine Learning",
+        "course_number": "CS402",
+        "department": "Computer Science",
+        "description": "Introduction to machine learning algorithms and applications.",
+        "prerequisites": ["CS401"],
+        "corequisites": []
     },
     {
-        "id": 10,
-        "title": "Computer Graphics",
-        "code": "CS403"
+        "credits": 3,
+        "course_name": "Computer Graphics",
+        "course_number": "CS403",
+        "department": "Computer Science",
+        "description": "Introduction to computer graphics principles and techniques.",
+        "prerequisites": ["CS201"],
+        "corequisites": []
     }
 ]

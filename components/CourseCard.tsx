@@ -45,8 +45,8 @@ const CourseCard: React.FC<CourseCardProps> = ({
         <div key={courseIndex} className={`${cardVariants.join(' ')}`} onClick={onClick}>
             {/* Course Info */}
             <div>
-                <div className="text-sm font-medium sm:text-md">{course.code}</div>
-                <div className="text-xs text-muted-foreground line-clamp-1 sm:text-sm">{course.title}</div>
+                <div className="text-sm font-medium sm:text-md">{course.course_number}</div>
+                <div className="text-xs text-muted-foreground line-clamp-1 sm:text-sm">{course.course_name}</div>
             </div>
 
             {/* Options */}

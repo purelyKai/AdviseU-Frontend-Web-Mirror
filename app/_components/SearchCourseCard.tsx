@@ -32,7 +32,7 @@ const SearchCourseCard: React.FC<SearchCourseCardProps> = ({
             <div className="grid gap-3 sm:grid-cols-2">
                 {availableCourses.map((course, index) => {
                     // Ignore courses that are already in the term
-                    if (term.courses.find((c) => c.id === course.id)) return null;
+                    if (term.courses.find((c) => c.course_number === course.course_number)) return null;
 
                     return (
                         <CourseCard

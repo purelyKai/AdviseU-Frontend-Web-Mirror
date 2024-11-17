@@ -34,7 +34,7 @@ export const useTermsStore = create<TermsStore>((set) => ({
                 if (t.id === term.id) {
                     return {
                         ...t,
-                        courses: t.courses.filter((c) => c.id !== course.id),
+                        courses: t.courses.filter((c) => c.course_number !== course.course_number),
                     };
                 }
                 return t;
