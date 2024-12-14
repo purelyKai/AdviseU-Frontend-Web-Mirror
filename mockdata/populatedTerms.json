@@ -1,0 +1,212 @@
+[
+    {
+        "id": 1,
+        "name": "Winter 2025",
+        "courses": [
+            {
+                "credits": 4,
+                "course_name": "Software Engineering I",
+                "course_number": "CS 361",
+                "department": "Computer Science",
+                "description": "Introduction to software engineering principles.",
+                "prerequisites": ["CS 290"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Web Development",
+                "course_number": "CS 290",
+                "department": "Computer Science",
+                "description": "Introduction to web development.",
+                "prerequisites": ["CS 161"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Analysis of Algorithms",
+                "course_number": "CS 325",
+                "department": "Computer Science",
+                "description": "Introduction to algorithm analysis.",
+                "prerequisites": ["CS 261"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Intro To Databases",
+                "course_number": "CS 340",
+                "department": "Computer Science",
+                "description": "Introduction to database systems.",
+                "prerequisites": ["CS 261"],
+                "corequisites": []
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Spring 2025",
+        "courses": [
+            {
+                "credits": 4,
+                "course_name": "Software Engineering II",
+                "course_number": "CS 362",
+                "department": "Computer Science",
+                "description": "Continuation of software engineering principles.",
+                "prerequisites": ["CS 361"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Special Topics - Probabilistic and Causal Inference",
+                "course_number": "CS 499",
+                "department": "Computer Science",
+                "description": "Special topics in probabilistic and causal inference.",
+                "prerequisites": ["CS 325"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Introduction to Computer Science II",
+                "course_number": "CS 162",
+                "department": "Computer Science",
+                "description": "Continuation of introduction to computer science.",
+                "prerequisites": ["CS 161"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Intro To Databases",
+                "course_number": "CS 340",
+                "department": "Computer Science",
+                "description": "Introduction to database systems.",
+                "prerequisites": ["CS 261"],
+                "corequisites": []
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Summer 2025",
+        "courses": [
+            {
+                "credits": 4,
+                "course_name": "Software Engineering I",
+                "course_number": "CS 361",
+                "department": "Computer Science",
+                "description": "Introduction to software engineering principles.",
+                "prerequisites": ["CS 290"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Web Development",
+                "course_number": "CS 290",
+                "department": "Computer Science",
+                "description": "Introduction to web development.",
+                "prerequisites": ["CS 161"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Analysis of Algorithms",
+                "course_number": "CS 325",
+                "department": "Computer Science",
+                "description": "Introduction to algorithm analysis.",
+                "prerequisites": ["CS 261"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Intro To Databases",
+                "course_number": "CS 340",
+                "department": "Computer Science",
+                "description": "Introduction to database systems.",
+                "prerequisites": ["CS 261"],
+                "corequisites": []
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Fall 2025",
+        "courses": [
+            {
+                "credits": 4,
+                "course_name": "Software Engineering II",
+                "course_number": "CS 362",
+                "department": "Computer Science",
+                "description": "Continuation of software engineering principles.",
+                "prerequisites": ["CS 361"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Special Topics - Probabilistic and Causal Inference",
+                "course_number": "CS 499",
+                "department": "Computer Science",
+                "description": "Special topics in probabilistic and causal inference.",
+                "prerequisites": ["CS 325"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Introduction to Computer Science II",
+                "course_number": "CS 162",
+                "department": "Computer Science",
+                "description": "Continuation of introduction to computer science.",
+                "prerequisites": ["CS 161"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Intro To Databases",
+                "course_number": "CS 340",
+                "department": "Computer Science",
+                "description": "Introduction to database systems.",
+                "prerequisites": ["CS 261"],
+                "corequisites": []
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Winter 2026",
+        "courses": [
+            {
+                "credits": 4,
+                "course_name": "Software Engineering I",
+                "course_number": "CS 361",
+                "department": "Computer Science",
+                "description": "Introduction to software engineering principles.",
+                "prerequisites": ["CS 290"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Web Development",
+                "course_number": "CS 290",
+                "department": "Computer Science",
+                "description": "Introduction to web development.",
+                "prerequisites": ["CS 161"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Analysis of Algorithms",
+                "course_number": "CS 325",
+                "department": "Computer Science",
+                "description": "Introduction to algorithm analysis.",
+                "prerequisites": ["CS 261"],
+                "corequisites": []
+            },
+            {
+                "credits": 4,
+                "course_name": "Intro To Databases",
+                "course_number": "CS 340",
+                "department": "Computer Science",
+                "description": "Introduction to database systems.",
+                "prerequisites": ["CS 261"],
+                "corequisites": []
+            }
+        ]
+    }
+]

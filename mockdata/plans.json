@@ -1,0 +1,139 @@
+{
+    "plans": [
+        {
+            "id": 1,
+            "name": "Computer Science 2026 Grad",
+            "terms": [
+                {
+                    "id": 1,
+                    "name": "Winter 2025",
+                    "courses": [
+                        {
+                            "credits": 4,
+                            "course_name": "Software Engineering I",
+                            "course_number": "CS 361",
+                            "department": "CS",
+                            "description": "Software Engineering I",
+                            "prerequisites": [],
+                            "corequisites": []
+                        },
+                        {
+                            "credits": 4,
+                            "course_name": "Web Development",
+                            "course_number": "CS 290",
+                            "department": "CS",
+                            "description": "Web Development",
+                            "prerequisites": [],
+                            "corequisites": []
+                        },
+                        {
+                            "credits": 4,
+                            "course_name": "Analysis of Algorithms",
+                            "course_number": "CS 325",
+                            "department": "CS",
+                            "description": "Analysis of Algorithms",
+                            "prerequisites": [],
+                            "corequisites": []
+                        },
+                        {
+                            "credits": 4,
+                            "course_name": "Intro To Databases",
+                            "course_number": "CS 340",
+                            "department": "CS",
+                            "description": "Intro To Databases",
+                            "prerequisites": [],
+                            "corequisites": []
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Spring 2025",
+                    "courses": [
+                        {
+                            "credits": 4,
+                            "course_name": "Software Engineering II",
+                            "course_number": "CS 362",
+                            "department": "CS",
+                            "description": "Software Engineering II",
+                            "prerequisites": [],
+                            "corequisites": []
+                        },
+                        {
+                            "credits": 4,
+                            "course_name": "Special Topics - Probabilistic and Causal Inference",
+                            "course_number": "CS 499",
+                            "department": "CS",
+                            "description": "Special Topics - Probabilistic and Causal Inference",
+                            "prerequisites": [],
+                            "corequisites": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Business Major 2026 Grad",
+            "terms": [
+                {
+                    "id": 1,
+                    "name": "Winter 2025",
+                    "courses": [
+                        {
+                            "credits": 4,
+                            "course_name": "Web Development",
+                            "course_number": "CS 290",
+                            "department": "CS",
+                            "description": "Web Development",
+                            "prerequisites": [],
+                            "corequisites": []
+                        },
+                        {
+                            "credits": 4,
+                            "course_name": "Analysis of Algorithms",
+                            "course_number": "CS 325",
+                            "department": "CS",
+                            "description": "Analysis of Algorithms",
+                            "prerequisites": [],
+                            "corequisites": []
+                        },
+                        {
+                            "credits": 4,
+                            "course_name": "Intro To Databases",
+                            "course_number": "CS 340",
+                            "department": "CS",
+                            "description": "Intro To Databases",
+                            "prerequisites": [],
+                            "corequisites": []
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Spring 2025",
+                    "courses": [
+                        {
+                            "credits": 4,
+                            "course_name": "Software Engineering II",
+                            "course_number": "CS 362",
+                            "department": "CS",
+                            "description": "Software Engineering II",
+                            "prerequisites": [],
+                            "corequisites": []
+                        },
+                        {
+                            "credits": 4,
+                            "course_name": "Special Topics - Probabilistic and Causal Inference",
+                            "course_number": "CS 499",
+                            "department": "CS",
+                            "description": "Special Topics - Probabilistic and Causal Inference",
+                            "prerequisites": [],
+                            "corequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,17 +1,21 @@
-import Navbar from '@/components/Navbar';
-import PlanSection from '@/app/sections/PlanSection';
+import HeroSection from './(components)/sections/HeroSection';
+import VideoDemoSection from './(components)/sections/VideoDemoSection';
+import FeaturesSection from './(components)/sections/FeaturesSection';
+import AboutSection from './(components)/sections/AboutSection';
+import TestimonialsSection from './(components)/sections/TestimonialsSection';
+import Footer from '@/components/Footer';
 
-export default function Component() {
+export default function LandingPage() {
     return (
-        <div className="flex min-h-screen w-screen flex-col">
-            <Navbar />
-            <main className="flex-1">
-                <div className="container mx-auto p-3 sm:p-6">
-                    <div className="flex flex-col w-full">
-                        <PlanSection />
-                    </div>
-                </div>
+        <div className="min-h-screen bg-white">
+            <main>
+                <HeroSection />
+                <VideoDemoSection />
+                <FeaturesSection />
+                <AboutSection />
+                <TestimonialsSection />
             </main>
+            <Footer />
         </div>
     );
 }

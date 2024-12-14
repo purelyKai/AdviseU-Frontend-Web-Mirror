@@ -1,0 +1,164 @@
+[
+    {
+        "credits": 3,
+        "course_name": "Introduction to Programming",
+        "course_number": "CS101",
+        "department": "Computer Science",
+        "description": "An introduction to programming concepts and techniques.",
+        "prerequisites": [],
+        "corequisites": []
+    },
+    {
+        "credits": 4,
+        "course_name": "Data Structures",
+        "course_number": "CS102",
+        "department": "Computer Science",
+        "description": "Study of data structures and their applications.",
+        "prerequisites": ["CS101"],
+        "corequisites": []
+    },
+    {
+        "credits": 4,
+        "course_name": "Algorithms",
+        "course_number": "CS201",
+        "department": "Computer Science",
+        "description": "Introduction to algorithms and their analysis.",
+        "prerequisites": ["CS102"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Operating Systems",
+        "course_number": "CS301",
+        "department": "Computer Science",
+        "description": "Study of operating system principles and design.",
+        "prerequisites": ["CS201"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Database Systems",
+        "course_number": "CS302",
+        "department": "Computer Science",
+        "description": "Introduction to database design and management.",
+        "prerequisites": ["CS201"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Computer Networks",
+        "course_number": "CS303",
+        "department": "Computer Science",
+        "description": "Study of computer networking principles and protocols.",
+        "prerequisites": ["CS201"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Software Engineering",
+        "course_number": "CS304",
+        "department": "Computer Science",
+        "description": "Introduction to software engineering principles and practices.",
+        "prerequisites": ["CS201"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Artificial Intelligence",
+        "course_number": "CS401",
+        "department": "Computer Science",
+        "description": "Introduction to artificial intelligence concepts and techniques.",
+        "prerequisites": ["CS304"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Machine Learning",
+        "course_number": "CS402",
+        "department": "Computer Science",
+        "description": "Study of machine learning algorithms and applications.",
+        "prerequisites": ["CS304"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Computer Graphics",
+        "course_number": "CS403",
+        "department": "Computer Science",
+        "description": "Study of computer graphics principles and techniques.",
+        "prerequisites": ["CS304"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Web Development",
+        "course_number": "CS404",
+        "department": "Computer Science",
+        "description": "Introduction to web development technologies and techniques.",
+        "prerequisites": ["CS304"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Mobile Development",
+        "course_number": "CS405",
+        "department": "Computer Science",
+        "description": "Introduction to mobile development technologies and techniques.",
+        "prerequisites": ["CS304"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Computer Security",
+        "course_number": "CS406",
+        "department": "Computer Science",
+        "description": "Study of computer security principles and techniques.",
+        "prerequisites": ["CS304"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Computer Vision",
+        "course_number": "CS407",
+        "department": "Computer Science",
+        "description": "Study of computer vision principles",
+        "prerequisites": ["CS304"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Natural Language Processing",
+        "course_number": "CS408",
+        "department": "Computer Science",
+        "description": "Introduction to natural language processing techniques and applications.",
+        "prerequisites": ["CS304"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Cloud Computing",
+        "course_number": "CS409",
+        "department": "Computer Science",
+        "description": "Study of cloud computing principles and practices.",
+        "prerequisites": ["CS304"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Quantum Computing",
+        "course_number": "CS410",
+        "department": "Computer Science",
+        "description": "Introduction to quantum computing concepts and algorithms.",
+        "prerequisites": ["CS304"],
+        "corequisites": []
+    },
+    {
+        "credits": 3,
+        "course_name": "Cyber-Physical Systems",
+        "course_number": "CS411",
+        "department": "Computer Science",
+        "description": "Study of cyber-physical systems and their applications.",
+        "prerequisites": ["CS304"],
+        "corequisites": []
+    }
+]

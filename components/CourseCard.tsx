@@ -11,7 +11,7 @@ import { EllipsisVertical } from 'lucide-react';
 import { useTermsStore } from '@/app/store';
 
 interface CourseCardProps {
-    term: Term;
+    term?: Term;
     course: Course;
     courseIndex?: number;
     selected?: boolean;
@@ -32,6 +32,12 @@ const CourseCard: React.FC<CourseCardProps> = ({
     if (!onClick) {
         onClick = () => {};
     }
+
+    const handleRemoveCourse = (course: Course, term?: Term) => {
+        if (!term || !course) return;
+
+        removeCourseFromTerm(term, course);
+    };
 
     const cardVariants = [
         'flex items-center justify-between rounded-lg border p-2 shadow-sm bg-white sm:p-3',
@@ -59,7 +65,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
-                        <DropdownMenuItem onClick={() => removeCourseFromTerm(term, course)}>
+                        <DropdownMenuItem onClick={() => handleRemoveCourse(course, term)}>
                             Remove course
                         </DropdownMenuItem>
                     </DropdownMenuContent>

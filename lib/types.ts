@@ -13,3 +13,13 @@ export interface Course {
     prerequisites: string[];
     corequisites: string[];
 }
+
+export interface Plan {
+    id: number;
+    name: string;
+    terms: Term[];
+}
+
+export type Params = Promise<{ planId: string }>;
+
+export type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
