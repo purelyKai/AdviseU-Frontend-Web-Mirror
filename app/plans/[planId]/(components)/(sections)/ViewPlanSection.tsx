@@ -112,9 +112,9 @@ const ViewPlanSection: React.FC<ViewPlanSectionProps> = ({ planId }) => {
                                         <Skeleton className="h-16 rounded-md bg-gray-50" />
                                     </>
                                 ) : (
-                                    data.map((course) => (
+                                    data.map((course: Course, idx: number) => (
                                         <motion.div
-                                            key={course.course_number}
+                                            key={idx}
                                             className={`p-2 cursor-pointer rounded-md ${
                                                 selectedCourse === course
                                                     ? 'bg-orange-100'
