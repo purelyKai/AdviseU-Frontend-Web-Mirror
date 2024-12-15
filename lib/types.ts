@@ -5,7 +5,7 @@ export interface Term {
 }
 
 export interface Course {
-    credits: number;
+    credits: string;
     course_name: string;
     course_number: string;
     department: string;
