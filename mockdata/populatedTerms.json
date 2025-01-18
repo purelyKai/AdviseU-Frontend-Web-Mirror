@@ -4,16 +4,16 @@
         "name": "Winter 2025",
         "courses": [
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Software Engineering I",
                 "course_number": "CS 361",
                 "department": "Computer Science",
                 "description": "Introduction to software engineering principles.",
                 "prerequisites": ["CS 290"],
-                "corequisites": []
+                "corequisites": ["CS 290"]
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Web Development",
                 "course_number": "CS 290",
                 "department": "Computer Science",
@@ -22,7 +22,7 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Analysis of Algorithms",
                 "course_number": "CS 325",
                 "department": "Computer Science",
@@ -31,7 +31,7 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Intro To Databases",
                 "course_number": "CS 340",
                 "department": "Computer Science",
@@ -46,7 +46,7 @@
         "name": "Spring 2025",
         "courses": [
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Software Engineering II",
                 "course_number": "CS 362",
                 "department": "Computer Science",
@@ -55,7 +55,7 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Special Topics - Probabilistic and Causal Inference",
                 "course_number": "CS 499",
                 "department": "Computer Science",
@@ -64,7 +64,7 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Introduction to Computer Science II",
                 "course_number": "CS 162",
                 "department": "Computer Science",
@@ -73,7 +73,7 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Intro To Databases",
                 "course_number": "CS 340",
                 "department": "Computer Science",
@@ -88,7 +88,7 @@
         "name": "Summer 2025",
         "courses": [
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Software Engineering I",
                 "course_number": "CS 361",
                 "department": "Computer Science",
@@ -97,7 +97,7 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Web Development",
                 "course_number": "CS 290",
                 "department": "Computer Science",
@@ -106,7 +106,7 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Analysis of Algorithms",
                 "course_number": "CS 325",
                 "department": "Computer Science",
@@ -115,7 +115,7 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Intro To Databases",
                 "course_number": "CS 340",
                 "department": "Computer Science",
@@ -130,7 +130,7 @@
         "name": "Fall 2025",
         "courses": [
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Software Engineering II",
                 "course_number": "CS 362",
                 "department": "Computer Science",
@@ -139,7 +139,7 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Special Topics - Probabilistic and Causal Inference",
                 "course_number": "CS 499",
                 "department": "Computer Science",
@@ -148,7 +148,7 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Introduction to Computer Science II",
                 "course_number": "CS 162",
                 "department": "Computer Science",
@@ -157,7 +157,7 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Intro To Databases",
                 "course_number": "CS 340",
                 "department": "Computer Science",
@@ -172,7 +172,7 @@
         "name": "Winter 2026",
         "courses": [
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Software Engineering I",
                 "course_number": "CS 361",
                 "department": "Computer Science",
@@ -181,7 +181,7 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Web Development",
                 "course_number": "CS 290",
                 "department": "Computer Science",
@@ -190,7 +190,7 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Analysis of Algorithms",
                 "course_number": "CS 325",
                 "department": "Computer Science",
@@ -199,13 +199,13 @@
                 "corequisites": []
             },
             {
-                "credits": 4,
+                "credits": "4",
                 "course_name": "Intro To Databases",
                 "course_number": "CS 340",
                 "department": "Computer Science",
                 "description": "Introduction to database systems.",
                 "prerequisites": ["CS 261"],
-                "corequisites": []
+                "corequisites": ["CS 325"]
             }
         ]
     }
