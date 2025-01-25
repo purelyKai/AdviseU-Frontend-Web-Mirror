@@ -7,7 +7,7 @@ on:
 
 jobs:
     mirror:
-        if: github.repository == 'AdviseU/AdviseU-Frontend-Web'
+        if: github.repository == 'AdviseU-Project/AdviseU-Frontend-Web'
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
