@@ -14,5 +14,5 @@ jobs:
 
             - name: Push to personal repo
               run: |
-                  git remote add personal https://<your-username>:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/<your-username>/AdviseU-Frontend-Web-Mirror.git
+                  git remote add personal https://purelyKai:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/purelyKai/AdviseU-Frontend-Web-Mirror.git
                   git push personal --all
