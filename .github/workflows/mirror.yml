@@ -1,0 +1,18 @@
+name: Mirror to Personal Repo for Deployment
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    mirror:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Push to personal repo
+              run: |
+                  git remote add personal https://<your-username>:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/<your-username>/AdviseU-Frontend-Web-Mirror.git
+                  git push personal --all
