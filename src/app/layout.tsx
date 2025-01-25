@@ -30,6 +30,7 @@ export default function RootLayout({
             <head>
                 <link rel="icon" href="/images/AdviseU-Logo.png" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="google-site-verification" content="uqO0kEl4syyua_A1JtoEkcOmh7Mhcs4FQDkBmk0f1D4" />
             </head>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <Navbar />
