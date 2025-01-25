@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+//import { useEffect } from 'react';
 import { Params, SearchParams } from '@/lib/types';
 import { motion } from 'framer-motion';
 import { useTermsStore } from '@/app/store';
@@ -12,9 +12,9 @@ const Page = async ({ params, searchParams }: { params: Params; searchParams: Se
     const planId = Number((await params).planId);
     const { initTerms } = useTermsStore();
 
-    useEffect(() => {
-        initTerms(populatedTerms);
-    }, []);
+    // useEffect(() => {
+    //     initTerms(populatedTerms);
+    // }, []);
 
     return (
         <motion.div
