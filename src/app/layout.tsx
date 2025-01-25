@@ -27,6 +27,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <head>
+                <link rel="icon" href="/images/AdviseU-Logo.png" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </head>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <Navbar />
                 <Providers>{children}</Providers>

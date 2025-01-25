@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, Shell } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 const Navbar: React.FC = () => {
     return (
@@ -8,8 +8,7 @@ const Navbar: React.FC = () => {
             {/* Large screen sizes */}
             <div className="mr-4 hidden md:flex">
                 <a className="mr-6 flex items-center space-x-2" href="/">
-                    {/* TODO: Replace Shell with AdviseU Logo */}
-                    <Shell color="#D73F09" />
+                    <img src="/images/AdviseU-Logo.png" alt="AdviseU Logo" className="h-8 w-8" />
                     <span className="hidden font-bold sm:inline-block">AdviseU</span>
                 </a>
                 <nav className="flex items-center space-x-6 text-sm font-medium">
