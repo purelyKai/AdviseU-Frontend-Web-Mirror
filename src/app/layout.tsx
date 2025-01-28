@@ -20,11 +20,7 @@ export const metadata: Metadata = {
     description: 'Create your academic plan with ease',
 };
 
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: React.PropsWithChildren) {
     return (
         <html lang="en">
             <head>
