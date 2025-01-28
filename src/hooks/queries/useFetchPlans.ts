@@ -1,4 +1,3 @@
-import { API_URL } from '@/lib/constants';
 import { useQuery } from '@tanstack/react-query';
 
 import mockData from '@/mockdata/plans.json';
@@ -7,7 +6,7 @@ import { Plan } from '@/lib/types';
 const fetchPlans = async (userId: number) => {
     if (!userId) return [];
 
-    const response = await fetch(`${API_URL}/catalog?department=${userId}`);
+    const response = await fetch(`${process.env.BACKEND_API_URL}/catalog?department=${userId}`);
     const data = await response.json();
     return data;
 };
