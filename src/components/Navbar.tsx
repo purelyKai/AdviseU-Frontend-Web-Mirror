@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 import { auth } from '@/lib/auth';
@@ -13,7 +14,7 @@ const Navbar: React.FC = async () => {
             {/* Large screen sizes */}
             <div className="mr-4 hidden md:flex">
                 <a className="mr-6 flex items-center space-x-2" href="/">
-                    <img src="/images/AdviseU-Logo.png" alt="AdviseU Logo" className="h-8 w-8" />
+                    <Image src="/images/AdviseU-Logo.png" alt="AdviseU Logo" className="h-8 w-8" />
                     <span className="hidden font-bold sm:inline-block">AdviseU</span>
                 </a>
                 <nav className="flex items-center space-x-6 text-sm font-medium">

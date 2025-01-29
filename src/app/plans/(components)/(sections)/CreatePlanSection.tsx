@@ -7,12 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Plus, Sparkles } from 'lucide-react';
 import { usePlansStore } from '@/app/store';
-
-interface Plan {
-    id: number;
-    name: string;
-    description: string;
-}
+import { Plan } from '@/lib/types';
 
 interface DegreeProgress {
     overallProgress: number;
@@ -30,7 +25,7 @@ const CreatePlanSection = () => {
         addPlan({ ...newPlan, id });
         setNewPlan({ name: '', description: '', id });
     };
-    
+
     return (
         <Card className="mb-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <CardHeader>
