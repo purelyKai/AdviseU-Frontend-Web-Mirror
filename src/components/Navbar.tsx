@@ -1,12 +1,12 @@
-'use client';
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
-import { useSession, signIn, signOut } from 'next-auth/react';
+import { auth, signIn, signOut } from '@/lib/auth';
+import SignIn from '@/components/SignIn';
+import SignOut from '@/components/SignOut';
 
-const Navbar: React.FC = () => {
-    const session = useSession();
+const Navbar: React.FC = async () => {
+    const session = await auth();
 
     return (
         <nav className="px-20 flex h-14 items-center shadow-md w-screen">
@@ -30,13 +30,7 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Authentication button */}
-            <div className="ml-auto">
-                {session ? (
-                    <Button onClick={() => signOut()}>Sign Out</Button>
-                ) : (
-                    <Button onClick={() => signIn()}>Sign In</Button>
-                )}
-            </div>
+            <div className="ml-auto">{session?.user ? <SignOut /> : <SignIn />}</div>
 
             {/* Small screen sizes */}
             <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">

@@ -10,7 +10,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Trash2, Edit, Plus, Sparkles } from 'lucide-react';
 import RecommendedClassesSection from './(components)/(sections)/RecommendedClassesSection';
-import { auth } from '@/lib/auth';
 
 interface Plan {
     id: string;
@@ -24,19 +23,7 @@ interface DegreeProgress {
     recommendedClasses: string[];
 }
 
-export async function getServerSideProps(ctx) {
-    const session = await auth(ctx);
-
-    return {
-        props: {
-            session,
-        },
-    };
-}
-
-export default function PlansPage({ session }) {
-    if (!session.user) return <div>Not authenticated</div>;
-
+export default function PlansPage() {
     const [plans, setPlans] = useState<Plan[]>([
         { id: '1', name: 'Fall 2024 Graduation Plan', description: 'Courses for Fall 2024 Graduation Date' },
         { id: '2', name: 'Spring 2025 Graduation Plan', description: 'Backup plan for Spring 2025 Graduation Date' },
