@@ -20,11 +20,7 @@ export const metadata: Metadata = {
     description: 'Create your academic plan with ease',
 };
 
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: React.PropsWithChildren) {
     return (
         <html lang="en">
             <head>
@@ -33,8 +29,10 @@ export default function RootLayout({
                 <meta name="google-site-verification" content="uqO0kEl4syyua_A1JtoEkcOmh7Mhcs4FQDkBmk0f1D4" />
             </head>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <Navbar />
-                <Providers>{children}</Providers>
+                <Providers>
+                    <Navbar />
+                    {children}
+                </Providers>
             </body>
         </html>
     );

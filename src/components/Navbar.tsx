@@ -1,8 +1,13 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
+import { auth } from '@/lib/auth';
+import SignIn from '@/components/SignIn';
+import SignOut from '@/components/SignOut';
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC = async () => {
+    const session = await auth();
+
     return (
         <nav className="px-20 flex h-14 items-center shadow-md w-screen">
             {/* Large screen sizes */}
@@ -23,6 +28,9 @@ const Navbar: React.FC = () => {
                     </a>
                 </nav>
             </div>
+
+            {/* Authentication button */}
+            <div className="ml-auto">{session?.user ? <SignOut /> : <SignIn />}</div>
 
             {/* Small screen sizes */}
             <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">

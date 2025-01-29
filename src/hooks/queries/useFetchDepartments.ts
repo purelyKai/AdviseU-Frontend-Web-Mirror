@@ -1,8 +1,7 @@
-import { API_URL } from '@/lib/constants';
 import { useQuery } from '@tanstack/react-query';
 
 const fetchDepartments = async () => {
-    const response = await fetch(`${API_URL}/catalogs`);
+    const response = await fetch(`${process.env.BACKEND_API_URL}/catalogs`);
     const data = await response.json();
 
     return data;

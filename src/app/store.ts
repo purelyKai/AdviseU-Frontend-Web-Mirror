@@ -1,4 +1,4 @@
-import { Course, Term } from '@/lib/types';
+import { Course, Plan, Term } from '@/lib/types';
 import { create } from 'zustand';
 
 type TermsStore = {
@@ -41,4 +41,26 @@ export const useTermsStore = create<TermsStore>((set) => ({
             }),
         }));
     },
+}));
+
+type PlansStore = {
+    plans: Plan[];
+    editingPlan: Plan | null;
+    addPlan: (plan: Plan) => void;
+    removePlan: (plan: Plan) => void;
+    deletePlan: (plan: Plan) => void;
+    setEditingPlan: (plan: Plan | null) => void;
+    initPlans: (plans: Plan[]) => void;
+    updatePlans: (plans: Plan[]) => void;
+};
+
+export const usePlansStore = create<PlansStore>((set) => ({
+    plans: [],
+    editingPlan: null,
+    addPlan: (plan) => set((state) => ({ plans: [...state.plans, plan] })),
+    removePlan: (plan) => set((state) => ({ plans: state.plans.filter((p) => p.id !== plan.id) })),
+    deletePlan: (plan) => set((state) => ({ plans: state.plans.filter((p) => p.id !== plan.id) })),
+    setEditingPlan: (plan) => set({ editingPlan: plan }),
+    initPlans: (plans) => set({ plans }),
+    updatePlans: (plans) => set({ plans }),
 }));
