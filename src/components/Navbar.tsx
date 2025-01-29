@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
-import { auth, signIn, signOut } from '@/lib/auth';
+import { auth } from '@/lib/auth';
 import SignIn from '@/components/SignIn';
 import SignOut from '@/components/SignOut';
 
