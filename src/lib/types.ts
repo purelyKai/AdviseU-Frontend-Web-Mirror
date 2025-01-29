@@ -18,6 +18,7 @@ export interface Plan {
     id: number;
     name: string;
     description: string;
+    terms?: Term[];
 }
 
 /* To be adjusted based on future user preference options */

@@ -3,6 +3,7 @@
         {
             "id": 1,
             "name": "Computer Science 2026 Grad",
+            "description": "Good schedule",
             "terms": [
                 {
                     "id": 1,
@@ -75,6 +76,7 @@
         {
             "id": 2,
             "name": "Business Major 2026 Grad",
+            "description": "Good schedule",
             "terms": [
                 {
                     "id": 1,
