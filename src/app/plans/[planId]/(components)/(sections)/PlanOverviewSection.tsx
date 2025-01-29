@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 import { Card } from '@/components/ui/card';
@@ -5,12 +7,15 @@ import { Button } from '@/components/ui/button';
 import CourseCard from '@/components/CourseCard';
 import { useTermsStore } from '@/app/store';
 import populatedTerms from '@/mockdata/populatedTerms.json';
-import { Term } from '@/lib/types';
 import { X } from 'lucide-react';
 
 const PlanOverviewSection = () => {
-    const { terms, removeTerm } = useTermsStore();
+    const { terms, removeTerm, initTerms } = useTermsStore();
     const controls = useAnimation();
+
+    useEffect(() => {
+        initTerms(populatedTerms);
+    }, []);
 
     return (
         <div className="w-full overflow-x-auto flex flex-col p-8 gap-3 bg-white/80 backdrop-blur-sm shadow-xl rounded-xl">

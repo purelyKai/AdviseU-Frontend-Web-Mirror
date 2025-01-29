@@ -17,7 +17,7 @@ export interface Course {
 export interface Plan {
     id: number;
     name: string;
-    terms: Term[];
+    description: string;
 }
 
 /* To be adjusted based on future user preference options */

@@ -1,11 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
-interface RecommendedClassesSectionProps {
-    classes: string[];
-}
+export default function RecommendedClassesSection() {
+    const recommendedClasses = ['CS 325', 'CS 340', 'CS 372'];
 
-export default function RecommendedClassesSection({ classes }: RecommendedClassesSectionProps) {
     return (
         <Card>
             <CardHeader>
@@ -13,7 +11,7 @@ export default function RecommendedClassesSection({ classes }: RecommendedClasse
             </CardHeader>
             <CardContent>
                 <div className="flex flex-wrap gap-2">
-                    {classes.map((cls, index) => (
+                    {recommendedClasses.map((cls, index) => (
                         <Badge key={index} variant="secondary" className="text-sm py-1 px-2">
                             {cls}
                         </Badge>
