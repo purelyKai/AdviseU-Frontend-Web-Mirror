@@ -1,10 +1,10 @@
-export interface Term {
+export type Term = {
     id: number;
     name: string;
     courses: Course[];
-}
+};
 
-export interface Course {
+export type Course = {
     credits: string;
     course_name: string;
     course_number: string;
@@ -12,32 +12,27 @@ export interface Course {
     description: string;
     prerequisites: string[];
     corequisites: string[];
-}
+};
 
-export interface Plan {
+export type Plan = {
     id: number;
     name: string;
     description: string;
     terms?: Term[];
-}
+};
 
 /* To be adjusted based on future user preference options */
-export interface UserPreferences {
+export type Preferences = {
     likes_outdoors: number;
-}
+};
 
-export interface UserAccount {
-    id: number;
-    email: string;
-    password: string;
-    first_name: string;
-    last_name: string;
+export type ProfileExtension = {
     majors: string[];
     concentrations: string[];
     minors: string[];
-    user_preferences: UserPreferences;
+    user_preferences: Preferences;
     plans: Plan[];
-}
+};
 
 export type Params = Promise<{ planId: string }>;
 
