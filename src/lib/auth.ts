@@ -1,5 +1,5 @@
 import NextAuth from 'next-auth';
-import { MongoDBAdapter } from '@auth/mongodb-adapter';
+import { MongoDBAdapter } from './mongodb-adapter';
 import client from './mongodb';
 import authConfig from './auth.config';
 
