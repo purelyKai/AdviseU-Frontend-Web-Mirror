@@ -14,7 +14,13 @@ const Navbar: React.FC = async () => {
             {/* Large screen sizes */}
             <div className="mr-4 hidden md:flex">
                 <a className="mr-6 flex items-center space-x-2" href="/">
-                    <Image src="/images/AdviseU-Logo.png" alt="AdviseU Logo" className="h-8 w-8" />
+                    <Image
+                        src="/images/AdviseU-Logo.png"
+                        alt="AdviseU Logo"
+                        className="h-8 w-8"
+                        width={320}
+                        height={320}
+                    />
                     <span className="hidden font-bold sm:inline-block">AdviseU</span>
                 </a>
                 <nav className="flex items-center space-x-6 text-sm font-medium">
