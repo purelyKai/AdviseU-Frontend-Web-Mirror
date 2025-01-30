@@ -34,6 +34,14 @@ export type ProfileExtension = {
     plans: Plan[];
 };
 
+export const defaultExtension: ProfileExtension = {
+    majors: [],
+    concentrations: [],
+    minors: [],
+    user_preferences: { likes_outdoors: 0 },
+    plans: [],
+};
+
 export type Params = Promise<{ planId: string }>;
 
 export type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
