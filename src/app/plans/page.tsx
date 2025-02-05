@@ -4,16 +4,13 @@ import ListPlansSection from './(components)/(sections)/ListPlansSection';
 import EditPlanModal from './(components)/(sections)/EditPlanModal';
 import DegreeProgressSection from './(components)/(sections)/DegreeProgressSection';
 import { auth } from '@/lib/auth';
+import SessionNotFound from '@/components/SessionNotFound';
 
 export default async function PlansPage() {
     const session = await auth();
 
     if (!session?.user) {
-        return (
-            <div className="container mx-auto px-4 py-8">
-                <h1 className="text-4xl font-bold mb-8">Please Sign-in to create or see your degree plans</h1>
-            </div>
-        );
+        return <SessionNotFound />;
     }
 
     return (

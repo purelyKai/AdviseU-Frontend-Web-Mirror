@@ -3,9 +3,16 @@ import { Card } from '@/components/ui/card';
 
 import CourseSearchSection from './(components)/(sections)/CourseSearchSection';
 import PlanOverviewSection from './(components)/(sections)/PlanOverviewSection';
+import { auth } from '@/lib/auth';
+import SessionNotFound from '@/components/SessionNotFound';
 
 const Page = async ({ params, searchParams }: { params: Params; searchParams: SearchParams }) => {
     const planId = Number((await params).planId);
+    const session = await auth();
+
+    if (!session?.user) {
+        return <SessionNotFound />;
+    }
 
     return (
         <div className="flex flex-col justify-center gap-12 px-10 max-w-full min-h-[94vh] bg-gradient-to-br from-orange-100 to-blue-100">
