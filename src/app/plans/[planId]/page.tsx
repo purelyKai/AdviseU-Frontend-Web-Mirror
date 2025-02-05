@@ -14,7 +14,7 @@ const Page = async ({ params, searchParams }: { params: Params; searchParams: Se
                 <p className="text-lg text-center text-gray-600">Plan ID: {planId}</p>
             </div>
 
-            <Card className="flex gap-5 w-full bg-transparent">
+            <Card className="flex gap-5 w-full bg-transparent shadow-none border-none">
                 <PlanOverviewSection />
                 <CourseSearchSection />
             </Card>

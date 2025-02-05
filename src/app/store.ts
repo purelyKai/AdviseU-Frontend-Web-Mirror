@@ -3,6 +3,8 @@ import { create } from 'zustand';
 
 type TermsStore = {
     terms: Term[];
+    selectedTerm: Term | null;
+    selectTerm: (term: Term | null) => void;
     addTerm: (term: Term) => void;
     removeTerm: (term: Term) => void;
     initTerms: (terms: Term[]) => void;
@@ -12,8 +14,14 @@ type TermsStore = {
 
 export const useTermsStore = create<TermsStore>((set) => ({
     terms: [],
+    selectedTerm: null,
+    selectTerm: (term) => set({ selectedTerm: term }),
     addTerm: (term) => set((state) => ({ terms: [...state.terms, term] })),
-    removeTerm: (term) => set((state) => ({ terms: state.terms.filter((t) => t.id !== term.id) })),
+    removeTerm: (term) =>
+        set((state) => ({
+            terms: state.terms.filter((t) => t.id !== term.id),
+            selectedTerm: state.selectedTerm === term ? null : state.selectedTerm,
+        })),
     initTerms: (terms) => set({ terms }),
     addCourseToTerm: (term, course) => {
         set((state) => ({
