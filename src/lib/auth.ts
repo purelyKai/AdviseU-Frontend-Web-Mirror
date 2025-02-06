@@ -24,6 +24,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             if (token.extension) {
                 session.user.extension = token.extension;
             }
+            if (token.sub) {
+                session.user.id = token.sub;
+            }
             return session;
         },
     },
