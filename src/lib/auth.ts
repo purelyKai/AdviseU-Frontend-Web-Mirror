@@ -22,7 +22,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         },
         async session({ session, token }) {
             if (token.extension) {
-                session.user.extension = token.extension;
+                const db = (await client).db();
+                const dbUser = await db.collection('users').findOne({ _id: new ObjectId(token.sub) });
+                session.user.extension = dbUser?.extension || null;
+            }
+            if (token.sub) {
+                session.user.id = token.sub;
             }
             return session;
         },

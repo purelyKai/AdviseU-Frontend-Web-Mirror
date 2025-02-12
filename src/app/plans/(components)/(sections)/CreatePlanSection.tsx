@@ -1,30 +1,17 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Plus, Sparkles } from 'lucide-react';
-import { usePlansStore } from '@/app/store';
-import { Plan } from '@/lib/types';
-
-interface DegreeProgress {
-    overallProgress: number;
-    missingClasses: string[];
-    recommendedClasses: string[];
-}
+import { NewPlan } from '@/lib/types';
+import { useCreatePlan } from '@/hooks/mutations/plans';
 
 const CreatePlanSection = () => {
-    const { plans, addPlan } = usePlansStore();
-    const [newPlan, setNewPlan] = useState<Plan>({ name: '', description: '', id: plans.length });
-
-    const handleCreatePlan = () => {
-        if (newPlan.name.trim() === '') return;
-        const id = plans.length + 1;
-        addPlan({ ...newPlan, id });
-        setNewPlan({ name: '', description: '', id });
-    };
+    const [newPlan, setNewPlan] = useState<NewPlan>({ name: '', description: '', terms: [] });
+    const { mutate, isPending } = useCreatePlan();
 
     return (
         <Card className="mb-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -46,7 +33,11 @@ const CreatePlanSection = () => {
                         value={newPlan.description}
                         onChange={(e) => setNewPlan({ ...newPlan, description: e.target.value })}
                     />
-                    <Button onClick={handleCreatePlan} className="w-full bg-orange-500 hover:bg-orange-600">
+                    <Button
+                        disabled={isPending}
+                        onClick={() => mutate(newPlan)}
+                        className="w-full bg-orange-500 hover:bg-orange-600"
+                    >
                         <Plus className="mr-2 h-4 w-4" /> Create Plan
                     </Button>
                 </div>

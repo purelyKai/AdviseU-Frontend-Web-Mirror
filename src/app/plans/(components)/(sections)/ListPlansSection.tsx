@@ -1,37 +1,29 @@
 'use client';
 
-import { useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Trash2, Edit } from 'lucide-react';
 import { usePlansStore } from '@/app/store';
+import { Plan } from '@/lib/types';
+import { useDeletePlan } from '@/hooks/mutations/plans';
+import { useSession } from 'next-auth/react';
 
 const ListPlansSection: React.FC = () => {
-    const { plans, deletePlan, initPlans, setEditingPlan } = usePlansStore();
+    const { setEditingPlan } = usePlansStore();
+    const { data } = useSession();
+    const { mutate } = useDeletePlan();
 
-    useEffect(() => {
-        initPlans([
-            {
-                id: 1,
-                name: 'Computer Science Degree Plan',
-                description: 'A degree plan for Computer Science students.',
-            },
-            {
-                id: 2,
-                name: 'Electrical Engineering Degree Plan',
-                description: 'A degree plan for Electrical Engineering students.',
-            },
-        ]);
-    }, []);
+    console.log(data);
 
     return (
         <AnimatePresence>
             <div className="grid gap-6 md:grid-cols-2">
-                {plans.map((plan) => (
+                {!data?.user.extension.plans.length && <h1>No Plans Yet...</h1>}
+                {data?.user.extension.plans.map((plan: Plan) => (
                     <motion.div
-                        key={plan.id}
+                        key={plan._id}
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.9 }}
@@ -56,13 +48,15 @@ const ListPlansSection: React.FC = () => {
                                         <Button
                                             variant="outline"
                                             size="icon"
-                                            onClick={() => deletePlan(plan)}
+                                            onClick={() => {
+                                                mutate(plan);
+                                            }}
                                             className="hover:bg-red-100"
                                         >
                                             <Trash2 className="h-4 w-4" />
                                         </Button>
                                     </div>
-                                    <Link href={`/plans/${plan.id}`}>
+                                    <Link href={`/plans/${plan._id}`}>
                                         <Button
                                             variant="secondary"
                                             className="bg-orange-100 hover:bg-orange-200 text-orange-600"
