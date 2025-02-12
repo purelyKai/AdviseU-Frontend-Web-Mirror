@@ -7,29 +7,20 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Trash2, Edit } from 'lucide-react';
 import { usePlansStore } from '@/app/store';
+import { useFetchPlans } from '@/hooks/queries/useFetchPlans';
+import { Plan } from '@/lib/types';
 
 const ListPlansSection: React.FC = () => {
     const { plans, deletePlan, initPlans, setEditingPlan } = usePlansStore();
+    const { data, isLoading, isError } = useFetchPlans();
 
-    useEffect(() => {
-        initPlans([
-            {
-                id: 1,
-                name: 'Computer Science Degree Plan',
-                description: 'A degree plan for Computer Science students.',
-            },
-            {
-                id: 2,
-                name: 'Electrical Engineering Degree Plan',
-                description: 'A degree plan for Electrical Engineering students.',
-            },
-        ]);
-    }, []);
+    console.log(data);
 
     return (
         <AnimatePresence>
             <div className="grid gap-6 md:grid-cols-2">
-                {plans.map((plan) => (
+                {!isLoading && !data.length && <h1>No Plans Yet...</h1>}
+                {data?.map((plan: Plan) => (
                     <motion.div
                         key={plan.id}
                         initial={{ opacity: 0, scale: 0.9 }}
