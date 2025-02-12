@@ -7,7 +7,7 @@ on:
 
 jobs:
     mirror:
-        if: github.repository == 'AdviseU-Project/AdviseU-Frontend-Web'
+        if: github.repository == 'AdviseU-Project/AdviseU-App-Web'
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
@@ -17,5 +17,5 @@ jobs:
             - name: Mirror repository
               uses: pixta-dev/repository-mirroring-action@v1
               with:
-                  target_repo_url: git@github.com:purelyKai/AdviseU-Frontend-Web-Mirror.git
+                  target_repo_url: git@github.com:purelyKai/AdviseU-App-Web-Mirror.git
                   ssh_private_key: ${{ secrets.MIRROR_SSH_PRIVATE_KEY }}
