@@ -5,7 +5,7 @@ import { auth } from '@/lib/auth';
 import { Collection, ObjectId } from 'mongodb';
 
 interface UserExtension {
-    plans?: Plan[];
+    plans: Plan[];
 }
 
 interface UserDocument {

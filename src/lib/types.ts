@@ -15,7 +15,7 @@ export type Course = {
 };
 
 export type Plan = NewPlan & {
-    _id: number;
+    _id: string;
 };
 
 export type NewPlan = {
