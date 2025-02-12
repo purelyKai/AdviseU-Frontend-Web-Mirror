@@ -22,14 +22,13 @@ export const useCreatePlan = (plan: NewPlan) => {
             toast({
                 title: `Plan Created: ${plan.name}`,
                 description: 'Your plan has been created successfully.',
-                color: 'green',
             });
         },
         onError: (error) => {
             toast({
                 title: 'Error',
                 description: error.message,
-                color: 'red',
+                variant: 'destructive',
             });
         },
     });
