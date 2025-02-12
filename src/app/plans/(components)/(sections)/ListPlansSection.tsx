@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -11,7 +10,7 @@ import { useFetchPlans } from '@/hooks/queries/useFetchPlans';
 import { Plan } from '@/lib/types';
 
 const ListPlansSection: React.FC = () => {
-    const { plans, deletePlan, initPlans, setEditingPlan } = usePlansStore();
+    const { deletePlan, setEditingPlan } = usePlansStore();
     const { data, isLoading, isError } = useFetchPlans();
 
     console.log(data);
@@ -22,7 +21,7 @@ const ListPlansSection: React.FC = () => {
                 {!isLoading && !data.length && <h1>No Plans Yet...</h1>}
                 {data?.map((plan: Plan) => (
                     <motion.div
-                        key={plan.id}
+                        key={plan._id}
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.9 }}
@@ -53,7 +52,7 @@ const ListPlansSection: React.FC = () => {
                                             <Trash2 className="h-4 w-4" />
                                         </Button>
                                     </div>
-                                    <Link href={`/plans/${plan.id}`}>
+                                    <Link href={`/plans/${plan._id}`}>
                                         <Button
                                             variant="secondary"
                                             className="bg-orange-100 hover:bg-orange-200 text-orange-600"
