@@ -1,36 +1,73 @@
 import { NextResponse } from 'next/server';
-import { Plan } from '@/lib/types';
+import { NewPlan, Plan } from '@/lib/types';
 import client from '@/lib/mongodb';
 import { auth } from '@/lib/auth';
-import { ObjectId } from 'mongodb';
+import { Collection, ObjectId } from 'mongodb';
 
-const fetchPlans = async (userId: string | undefined): Promise<Plan[]> => {
+interface UserExtension {
+    plans?: Plan[];
+}
+
+interface UserDocument {
+    _id: ObjectId;
+    extension?: UserExtension;
+}
+
+// Fetch plans for a user
+const fetchPlans = async (userId: string): Promise<Plan[]> => {
     const db = (await client.connect()).db('test');
-    const collection = db.collection('users');
+    const collection: Collection<UserDocument> = db.collection('users');
 
-    const oId = new ObjectId(userId);
-    const filter = { _id: oId };
+    const user = await collection.findOne({ _id: new ObjectId(userId) });
 
-    const user = await collection.findOne(filter);
-    if (!user || !user.extension || !user.extension.plans) {
-        return [];
-    }
-
-    const plans = user.extension.plans;
-
-    return plans;
+    return user?.extension?.plans ?? [];
 };
 
+// Create a new plan for a user
+const createPlan = async (plan: NewPlan, userId: string): Promise<boolean> => {
+    const db = client.db('test');
+    const users: Collection<UserDocument> = db.collection('users');
+
+    const newPlan = { ...plan, _id: new ObjectId() }; // Add an ObjectId to the plan
+
+    const result = await users.updateOne({ _id: new ObjectId(userId) }, { $push: { 'extension.plans': newPlan } });
+
+    return result.modifiedCount === 1;
+};
+
+// GET request handler - Fetch plans
 export async function GET(req: Request) {
     try {
         const session = await auth();
-        if (!session || !session.user.id) {
+        if (!session?.user?.id) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 
         const plans = await fetchPlans(session.user.id);
         return NextResponse.json(plans);
     } catch (error) {
-        return NextResponse.json({ error: 'Failed to fetch courses' }, { status: 500 });
+        console.error('GET Error:', error);
+        return NextResponse.json({ error: 'Failed to fetch plans' }, { status: 500 });
+    }
+}
+
+// POST request handler - Create a plan
+export async function POST(req: Request) {
+    try {
+        const session = await auth();
+        if (!session?.user?.id) {
+            return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+        }
+
+        const body = await req.json();
+        if (!body.plan) {
+            return NextResponse.json({ error: 'Plan data is required' }, { status: 400 });
+        }
+
+        const status = await createPlan(body.plan, session.user.id);
+        return NextResponse.json({ success: status });
+    } catch (error) {
+        console.error('POST Error:', error);
+        return NextResponse.json({ error: 'Failed to create plan' }, { status: 500 });
     }
 }

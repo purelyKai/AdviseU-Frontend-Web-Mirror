@@ -14,8 +14,11 @@ export type Course = {
     corequisites: string[];
 };
 
-export type Plan = {
-    id: number;
+export type Plan = NewPlan & {
+    _id: number;
+};
+
+export type NewPlan = {
     name: string;
     description: string;
     terms?: Term[];
