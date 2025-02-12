@@ -6,13 +6,16 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { usePlansStore } from '@/app/store';
+import { useUpdatePlan } from '@/hooks/mutations/plans';
 
 const EditPlanModal = () => {
-    const { plans, updatePlans, editingPlan, setEditingPlan } = usePlansStore();
+    const { editingPlan, setEditingPlan } = usePlansStore();
+    const { mutate } = useUpdatePlan();
 
     const handleUpdatePlan = () => {
         if (!editingPlan || editingPlan.name.trim() === '') return;
-        updatePlans(plans.map((plan) => (plan.id === editingPlan.id ? editingPlan : plan)));
+
+        mutate(editingPlan);
         setEditingPlan(null);
     };
     return (

@@ -7,11 +7,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Plus, Sparkles } from 'lucide-react';
 import { NewPlan } from '@/lib/types';
-import { useCreatePlan } from '@/hooks/mutations/useCreatePlan';
+import { useCreatePlan } from '@/hooks/mutations/plans';
 
 const CreatePlanSection = () => {
     const [newPlan, setNewPlan] = useState<NewPlan>({ name: '', description: '', terms: [] });
-    const { mutate, isPending } = useCreatePlan(newPlan);
+    const { mutate, isPending } = useCreatePlan();
 
     return (
         <Card className="mb-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -35,7 +35,7 @@ const CreatePlanSection = () => {
                     />
                     <Button
                         disabled={isPending}
-                        onClick={() => mutate()}
+                        onClick={() => mutate(newPlan)}
                         className="w-full bg-orange-500 hover:bg-orange-600"
                     >
                         <Plus className="mr-2 h-4 w-4" /> Create Plan

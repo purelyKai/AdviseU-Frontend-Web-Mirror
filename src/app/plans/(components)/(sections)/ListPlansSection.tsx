@@ -6,20 +6,22 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Trash2, Edit } from 'lucide-react';
 import { usePlansStore } from '@/app/store';
-import { useFetchPlans } from '@/hooks/queries/useFetchPlans';
 import { Plan } from '@/lib/types';
+import { useDeletePlan } from '@/hooks/mutations/plans';
+import { useSession } from 'next-auth/react';
 
 const ListPlansSection: React.FC = () => {
-    const { deletePlan, setEditingPlan } = usePlansStore();
-    const { data, isLoading, isError } = useFetchPlans();
+    const { setEditingPlan } = usePlansStore();
+    const { data } = useSession();
+    const { mutate } = useDeletePlan();
 
     console.log(data);
 
     return (
         <AnimatePresence>
             <div className="grid gap-6 md:grid-cols-2">
-                {!isLoading && !data.length && <h1>No Plans Yet...</h1>}
-                {data?.map((plan: Plan) => (
+                {!data?.user.extension.plans.length && <h1>No Plans Yet...</h1>}
+                {data?.user.extension.plans.map((plan: Plan) => (
                     <motion.div
                         key={plan._id}
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -46,7 +48,9 @@ const ListPlansSection: React.FC = () => {
                                         <Button
                                             variant="outline"
                                             size="icon"
-                                            onClick={() => deletePlan(plan)}
+                                            onClick={() => {
+                                                mutate(plan);
+                                            }}
                                             className="hover:bg-red-100"
                                         >
                                             <Trash2 className="h-4 w-4" />
