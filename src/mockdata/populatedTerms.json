@@ -10,7 +10,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to software engineering principles.",
                 "prerequisites": ["CS 290"],
-                "corequisites": ["CS 290"]
+                "corequisites": ["CS 290"],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -19,7 +20,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to web development.",
                 "prerequisites": ["CS 161"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -28,7 +30,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to algorithm analysis.",
                 "prerequisites": ["CS 261"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -37,7 +40,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to database systems.",
                 "prerequisites": ["CS 261"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             }
         ]
     },
@@ -52,7 +56,8 @@
                 "department": "Computer Science",
                 "description": "Continuation of software engineering principles.",
                 "prerequisites": ["CS 361"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -61,7 +66,8 @@
                 "department": "Computer Science",
                 "description": "Special topics in probabilistic and causal inference.",
                 "prerequisites": ["CS 325"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -70,7 +76,8 @@
                 "department": "Computer Science",
                 "description": "Continuation of introduction to computer science.",
                 "prerequisites": ["CS 161"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -79,7 +86,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to database systems.",
                 "prerequisites": ["CS 261"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             }
         ]
     },
@@ -94,7 +102,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to software engineering principles.",
                 "prerequisites": ["CS 290"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -103,7 +112,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to web development.",
                 "prerequisites": ["CS 161"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -112,7 +122,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to algorithm analysis.",
                 "prerequisites": ["CS 261"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -121,7 +132,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to database systems.",
                 "prerequisites": ["CS 261"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             }
         ]
     },
@@ -136,7 +148,8 @@
                 "department": "Computer Science",
                 "description": "Continuation of software engineering principles.",
                 "prerequisites": ["CS 361"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -145,7 +158,8 @@
                 "department": "Computer Science",
                 "description": "Special topics in probabilistic and causal inference.",
                 "prerequisites": ["CS 325"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -154,7 +168,8 @@
                 "department": "Computer Science",
                 "description": "Continuation of introduction to computer science.",
                 "prerequisites": ["CS 161"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -163,7 +178,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to database systems.",
                 "prerequisites": ["CS 261"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             }
         ]
     },
@@ -178,7 +194,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to software engineering principles.",
                 "prerequisites": ["CS 290"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -187,7 +204,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to web development.",
                 "prerequisites": ["CS 161"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -196,7 +214,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to algorithm analysis.",
                 "prerequisites": ["CS 261"],
-                "corequisites": []
+                "corequisites": [],
+                "offerings": {}
             },
             {
                 "credits": "4",
@@ -205,7 +224,8 @@
                 "department": "Computer Science",
                 "description": "Introduction to database systems.",
                 "prerequisites": ["CS 261"],
-                "corequisites": ["CS 325"]
+                "corequisites": ["CS 325"],
+                "offerings": {}
             }
         ]
     }
