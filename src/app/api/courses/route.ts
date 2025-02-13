@@ -4,7 +4,7 @@ import client from '@/lib/mongodb';
 
 const fetchCourses = async (query: string | null): Promise<Course[]> => {
     const db = (await client.connect()).db('adviseu_db');
-    const collection = db.collection('catalogs');
+    const collection = db.collection('courses');
 
     const filter: any = {};
 

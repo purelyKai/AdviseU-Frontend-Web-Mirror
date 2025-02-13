@@ -12,6 +12,30 @@ export type Course = {
     description: string;
     prerequisites: string[];
     corequisites: string[];
+    offerings: Record<
+        string,
+        {
+            // Offerings will be an object with keys representing terms (fall_2024, winter_2025, spring_2025)
+            count: number;
+            results: Array<{
+                start_date: string;
+                end_date: string;
+                crn: string;
+                instr: string;
+                meets: string;
+                key: string;
+                mpkey: string;
+                stat: string;
+                isCancelled: string;
+                meetingTimes: string;
+                schd: string;
+                ssrFees: string;
+                camp: string;
+                no: string;
+            }>;
+            srcdb: string;
+        }
+    >;
 };
 
 export type Plan = NewPlan & {
