@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AdviseU-App-Web
 
-## Getting Started
+## Overview
 
-First, run the development server:
+AdviseU-App-Web is the frontend for AdviseU, a web application designed to assist students and advisors at Oregon State University in generating optimal course plans based on degree requirements, preferences, interests, course difficulty, and availability. This repository houses the Next.js application that serves as the user interface for AdviseU.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- User profile management, including degree details, anticipated graduation date, interests, and preferred course load.
+- Course recommendations using a Pinecone vector database for similarity search.
+- Comprehensive degree plan and course recommendation system through advanced algorithm techniques.
+- Integration with a MongoDB database for course data.
+- Server-side embedding generation for real-time query processing.
+- Interactive UI built with React and TypeScript.
+
+## Tech Stack
+
+- **Frontend:** Next.js (React, TypeScript)
+- **Database:** MongoDB (course data storage)
+- **Vector Database:** Pinecone (course similarity search)
+- **Hosting:** Vercel (deployment)
+- **Backend APIs**: Queries MongoDB and Pinecone (using OpenAI for embeddings) for relevant course recommendations.
+- **Backend Server**: Scalable C++ server that hosts the degree-plan scheduling algorithm.
+
+## Setup Instructions
+
+### Prerequisites
+
+- Node.js (>= 18)
+- npm or yarn
+- Environment variables for MongoDB, Pinecone, and any other API keys
+
+### Installation
+
+```
+# Clone the repository
+git clone https://github.com/AdviseU/AdviseU-App-Web.git
+cd AdviseU-App-Web
+
+# Install dependencies
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running the development server
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This will start the Next.js development server. By default, the app will be available at `http://localhost:3000/`.
 
-## Learn More
+### Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a `.env.local` file in the root directory and configure the required environment variables, detailed in `.env.local.example`.
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application is deployed using Vercel which targets the `main` branch. It will automatically redeploy when there are any changes to the `main` branch. To deploy manually:
 
-## Deploy on Vercel
+```
+vercel --prod
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Make sure your environment variables are set up in Vercel before deploying.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under an EULA.
