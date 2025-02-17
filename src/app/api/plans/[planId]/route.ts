@@ -18,7 +18,6 @@ const updatePlan = async (plan: Plan, userId: string): Promise<boolean> => {
     const db = client.db('test');
     const users: Collection<UserDocument> = db.collection('users');
 
-    console.log(plan);
     const planId = new ObjectId(plan._id);
 
     const result = await users.updateOne(
@@ -52,7 +51,11 @@ export async function PUT(req: Request) {
         }
 
         const status = await updatePlan(body.plan, session.user.id);
-        console.log(status);
+
+        if (!status) {
+            return NextResponse.json({ error: 'Failed to update plan' }, { status: 500 });
+        }
+
         return NextResponse.json({ success: status });
     } catch (error) {
         console.error('POST Error:', error);
@@ -83,7 +86,6 @@ const deletePlan = async (planId: string, userId: string): Promise<boolean> => {
 export async function DELETE(request: Request, { params }: { params: Promise<{ planId: string }> }) {
     try {
         const planId = (await params).planId;
-        console.log(planId);
 
         const session = await auth();
         if (!session?.user?.id) {
@@ -91,7 +93,11 @@ export async function DELETE(request: Request, { params }: { params: Promise<{ p
         }
 
         const status = await deletePlan(planId, session.user.id);
-        console.log('Status', status);
+
+        if (!status) {
+            return NextResponse.json({ error: 'Failed to delete plan' }, { status: 500 });
+        }
+
         return NextResponse.json({ success: status });
     } catch (error) {
         console.error('POST Error:', error);
