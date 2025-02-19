@@ -51,7 +51,7 @@ This will start the Next.js development server. By default, the app will be avai
 
 ### Environment Variables
 
-Create a `.env.local` file in the root directory and configure the required environment variables, detailed in `.env.local.example`.
+Create a `.env.local` file in the root directory and configure the required environment variables which are detailed in `.env.local.example`.
 
 ## Deployment
 
